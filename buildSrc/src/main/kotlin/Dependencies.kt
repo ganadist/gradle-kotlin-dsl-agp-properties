@@ -7,7 +7,7 @@ object Versions {
 
     // Plugins
     val androidGradlePlugin = Properties().apply {
-        load(Files.newBufferedReader(File("buildSrc", "gradle.properties").toPath()))
+        load(Files.newBufferedReader(File("buildSrc", "gradle.properties").toPath().toAbsolutePath()))
     }.getProperty("agpVersion")
 }
 
